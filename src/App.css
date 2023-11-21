@@ -1,38 +1,256 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header{
+    display: flex;
+    padding: 16px 0px;
+    background-color: white;
+    box-shadow: 0px 0px 3px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header .first{
+    display: flex;
+    width: 40%;
+    justify-content: flex-start;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Header .img img{
+    width: 100%;
+    max-width: 180px;
 }
-
-.App-link {
-  color: #61dafb;
+.Header .input input{
+    width: 228px;
+    padding: 4px 25px 4px 10px;
+    margin-top: 5px;
+    margin-left: 12px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header .input input:focus{
+    outline: rgb(208, 20, 92);
+    border-color: pink;
+}
+.Header .searchbu button{
+    padding: 3px 20px 7px 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: 1px solid gray;
+    background-color: #ec407a;
+    border-radius: 5px;
+    color: white;
+}
+.Header .first .search-sys{
+    display: flex;
+}
+.Header .searchbu button:hover{
+    background-color: #a40b3e;
+}
+.Header .searchbu button svg{
+    font-size: 22px;
+}
+.Header .dropdown-list select{
+    padding: 6px 14px;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 117px;
+}
+.Header .navbar .menu li{
+    padding: 0px 4px;
+    margin-left: 4px;
+    font-weight: 600;
+}
+.Header .second{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+}
+.Header .second .close{
+    display: flex;
+}
+.Header .t1,.t2{
+    display: none;
+}
+.Header .second .icon-list{
+    place-items: center;
+    display: flex;
+}
+.Header .second .icon-list span{
+font-size: 30px;
+color: #ec407a;
+margin-top: -6px;
+}
+.Header .second .icon-list button{
+    padding: 3px 6px 4px 6px;
+    border: 1px solid gray;
+    background-color: #ec407a;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-right: 10px;
+    color: white;
+}
+.Header .second .icon-list button a{
+    text-decoration: none;
+    color: white;
+}
+.Header .second .icon-list button:hover{
+    background-color: #a40b3e;
+}
+/* ///login */
+.login{
+    text-align: center;
+    width: 100%;
+    max-width: 28rem;
+    margin: auto;
+}
+.login .img img{
+    width: 100%;
+    max-width: 110px;
+    margin-top: 6rem;
+}
+.login .img h2{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 800;
+    margin-top: 1.5rem;
+}
+.login .number{
+    margin-top: 1.5rem;
+}
+.login .number input{
+    padding: 3px 10px 3px 10px;
+    max-width: 443px;
+    width: 100%;
+    font-weight: 300;
+}
+.login .button button{
+    background-color: #ec407a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 1rem;
+    max-width: 443px;
+    padding: 6px 10px 6px 10px;
+}
+.login .button button:hover{
+    background-color: #a40b3e;
+}
+/* ////footer */
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #e9e9e9;
+    padding: 2rem 0;
+}
+.footer .first{
+    margin-top: 3rem;
+}
+.footer .first img{
+    width: 100%;
+    max-width: 182px;
+}
+.footer .first p{
+    width: 245px;
+    font-weight: 300;
+    color: #423333;
+    margin-left: 12px;
+}
+.footer .second h2{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6f5757;
+    font-family: system-ui;
+    text-transform: uppercase;
+}
+.footer .second li a:hover{
+    color: #ec407a;
+}
+.footer .second li a{
+    text-decoration: none;
+    color: #8a8a8a;
+}
+.footer .third h2{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6f5757;
+    font-family: system-ui;
+    text-transform: uppercase;
+}
+.footer .third li a{
+    text-decoration: none;
+    color: #8a8a8a;
+}
+.footer .third li a:hover{
+    color: #ec407a;
+}
+.footer .four h2{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: 400;
+    color: #6f5757;
+    font-family: system-ui;
+    text-transform: uppercase;
+}
+.footer .four li a{
+    text-decoration: none;
+    color: #8a8a8a;
+}
+.footer .four li a:hover{
+    color: #ec407a;
+}
+.footer .five{
+    margin-top: 4rem;
+}
+.footer .five img{
+    width: 100%;
+    max-width: 200px;
+}
+@media screen and (max-width: 584px){
+    .Header .first{
+        display: block;
+    }
+    .Header .second .open{
+        background-color: white;
+        color: #ec407a;
+        transform: translate(6px, 252px);
+    }
+    .Header .second .close{
+        transform: translateY(-200px);
+    }
+    .Header .second .open .navbar .menu li{
+        padding: 0;
+        margin: 0;
+    }
+    .Header .second .open .navbar{
+        display: block;
+        text-align: center;
+    }
+    .Header .dropdown-list select{
+        padding: 0;
+        margin: 0;
+    }
+    .Header .t1,.t2{
+        display: block;
+    }
+    .Header .t2 button{
+        position: absolute;
+    left: 32%;
+    top: -24%;
+    background-color: white;
+    color: #ec407a!important;
+    border: none;
+    font-size: 25px;
+    }
+    .Header .t1 button{
+        background-color: white;
+    color: #ec407a!important;
+    border: none;
+    position: absolute;
+    left: 90%;
+    font-size: 41px;
+    }
+    .Header .second .icon-list{
+        display: none!important;
+    }
 }
