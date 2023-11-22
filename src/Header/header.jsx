@@ -62,7 +62,7 @@ function Header(){
                         return(
                             <>
                             <div className="menu" id={data.id}>
-                            <li>{data.name}</li>
+                            <li><Link to={data.path}>{data.name}</Link></li>
                             </div>
                             </>
                         )
