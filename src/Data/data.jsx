@@ -193,3 +193,65 @@ const themedata = [
     }
 ]
 export{themedata}
+const filterinputdata = [
+    {
+        id:1,
+        type:"checkbox",
+        name:"Anime"
+    },
+    {
+        id:2,
+        type:"checkbox",
+        name:"Coding"
+    },
+    {
+        id:3,
+        type:"checkbox",
+        name:"Combo"
+    },
+    {
+        id:4,
+        type:"checkbox",
+        name:"Gym"
+    },
+    {
+        id:5,
+        type:"checkbox",
+        name:"Hacking"
+    },
+    {
+        id:6,
+        type:"checkbox",
+        name:"Lifestyle"
+    },
+    {
+        id:7,
+        type:"checkbox",
+        name:"Music"
+    },
+
+]
+export{filterinputdata}
+const filterinputdatas = [
+    {
+        id:1,
+        type:"checkbox",
+        name:"Black"
+    },
+    {
+        id:2,
+        type:"checkbox",
+        name:"Navyblue"
+    },
+    {
+        id:3,
+        type:"checkbox",
+        name:"Red"
+    },
+    {
+        id:4,
+        type:"checkbox",
+        name:"White"
+    }
+]
+export{filterinputdatas}

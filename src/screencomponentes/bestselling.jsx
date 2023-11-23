@@ -5,11 +5,11 @@ import bestimg3 from "../Image/0 (3).webp"
 import bestimg4 from "../Image/0 (4).webp"
 import { FaRupeeSign } from "react-icons/fa";
 import bestimg5 from "../Image/0 (5).webp"
-// import bestimg11 from "../Image/1 (1).webp"
-// import bestimg12 from "../Image/1 (1) (1).webp"
-// import bestimg13 from "../Image/1 (2).webp"
-// import bestimg14 from "../Image/1 (3).webp"
-// import bestimg15 from "../Image/1 (4).webp"
+import bestimg11 from "../Image/1 (1).webp"
+import bestimg12 from "../Image/1 (1) (1).webp"
+import bestimg13 from "../Image/1 (2).webp"
+import bestimg14 from "../Image/1 (3).webp"
+import bestimg15 from "../Image/1 (4).webp"
 
 function Bestselling(){
     const bestdata =[
@@ -21,7 +21,7 @@ function Bestselling(){
             ricon:<FaRupeeSign />,
             Number:"699",
             number2:"549",
-            // img1:`${bestimg11}`
+            img1:`${bestimg11}`
         },
         {
             id:2,
@@ -31,7 +31,7 @@ function Bestselling(){
             ricon:<FaRupeeSign />,
             Number:"699",
             number2:"549",
-            // img1:`${bestimg12}`
+            img1:`${bestimg12}`
         },
         {
             id:3,
@@ -41,7 +41,7 @@ function Bestselling(){
             ricon:<FaRupeeSign />,
             Number:"699",
             number2:"549",
-            // img1:`${bestimg13}`
+            img1:`${bestimg13}`
         },
         {
             id:4,
@@ -51,7 +51,7 @@ function Bestselling(){
             ricon:<FaRupeeSign />,
             Number:"949",
             number2:"799",
-            // img1:`${bestimg14}`
+            img1:`${bestimg14}`
         },
         {
             id:5,
@@ -61,7 +61,7 @@ function Bestselling(){
             ricon:<FaRupeeSign />,
             Number:"699",
             number2:"549",
-            // img1:`${bestimg15}`
+            img1:`${bestimg15}`
         }
     ]
     return(
@@ -73,10 +73,10 @@ function Bestselling(){
                 bestdata.map((data)=>{
                     return(
                         <>
-                        <div className="img">
+                        <div id={data.id} className="best-card">
+                            <div className="img">
                                 <img src={data.img1} alt="" />
                             </div>
-                        <div id={data.id} className="best-card">
                             <img src={data.img} alt="" />
                             <h4>{data.name}</h4>
                             <p>{data.detail}</p>

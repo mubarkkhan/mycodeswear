@@ -6,16 +6,23 @@ import { IoCartOutline } from "react-icons/io5";
 import { BsMoonStars } from "react-icons/bs";
 import { GiCrossMark } from "react-icons/gi";
 import { IoMenuOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header(){
 
+    const [moon,setmoon]=useState(false)
     const [toggle,settoggle]=useState(false)
     const click1=()=>{
         settoggle(true)
     }
     const click2=()=>{
         settoggle(false)
+    }
+    const Moon1=()=>{
+        setmoon(true)
+    }
+    const Moon2=()=>{
+        setmoon(false)
     }
     return(
         <>
@@ -25,7 +32,7 @@ function Header(){
                     </div>
             <div className="first">
             <div className="img">
-            <Link to="/"><img src={logoimg} alt="logo" /></Link>
+            <NavLink excat activeClassName="active" to="/"><img src={logoimg} alt="logo" /></NavLink>
             </div>
             <div className="search-sys">
             <div className="input">
@@ -62,7 +69,7 @@ function Header(){
                         return(
                             <>
                             <div className="menu" id={data.id}>
-                            <li><Link to={data.path}>{data.name}</Link></li>
+                            <li><NavLink excat activeClassName="active" to={data.path}>{data.name}</NavLink></li>
                             </div>
                             </>
                         )
@@ -72,8 +79,11 @@ function Header(){
             </div>
             <div className="icon-list">
                 <span><IoCartOutline /></span>
-                <button><Link to="/login">Login</Link></button>
-                <span><BsMoonStars /></span>
+                <button><NavLink excat activeClassName="active" to="/login">Login</NavLink></button>
+                <div className={`${(moon === true) ? "mopen" : "mclose"}`}>
+                <button onClick={Moon1} className={`${(moon === true) ? "on1" : "off1"}`}><BsMoonStars /></button>
+                </div>
+                <button onClick={Moon2} className={`${(moon === false) ? "on2" : "off2"}`}><BsMoonStars /></button>
             </div>
             </div>
         </div>

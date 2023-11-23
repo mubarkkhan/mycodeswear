@@ -3,6 +3,14 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+    z-index: 10000;
+}
+.active{
+    color: #ec407a!important;
+}
+.flex{
+    display: flex;
+    margin-top: 2rem;
 }
 .Header{
     display: flex;
@@ -98,6 +106,30 @@ margin-top: -6px;
 .Header .second .icon-list button:hover{
     background-color: #a40b3e;
 }
+.Header .second .icon-list .mopen{
+    transform: translate(-228px,87px);
+    height: 1562vh;
+    width: 100%;
+    opacity: 0.2;
+    left: 18%;
+    z-index: 1;
+    position: absolute;
+    background-color: black;
+}
+.Header .second .icon-list button.on2{
+    display: none;
+}
+.Header .second .icon-list .mopen button.on1{
+    display: none;
+}
+.Header .second .icon-list .mopen button.off2{
+    position: absolute;
+    left: 130.5%;
+    top: 4.5%;
+}
+.Header .second .icon-list .mclose{
+    transform: translateY(0px);
+}
 /* ///login */
 .login{
     text-align: center;
@@ -186,6 +218,7 @@ margin-top: -6px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row-reverse;
+    z-index: 1;
 }
 .collection .card .cards{
     width: 30%;
@@ -217,6 +250,7 @@ margin-top: -6px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row-reverse;
+    z-index: 1;
 }
 .theme .cards{
     width: 30%;
@@ -247,6 +281,19 @@ margin-top: -6px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+.best .best-t-card .best-card .img img{
+    position: absolute;
+    margin-left: -23px;
+    display: none;
+}
+.best .best-t-card .best-card .img img:hover{
+    cursor: pointer;
+    display: block;
+}
+.best .best-card img:hover{
+    cursor: pointer;
+    display: none;
 }
 .best .best-card img{
     width: 100%;
@@ -304,6 +351,164 @@ margin-top: -6px;
     max-width: 40px;
     font-size: 25px;
     margin: auto;
+}
+/* /////////////caps */
+.filter{
+    width: 130%;
+}
+.f1,.f2{
+    display: none;
+}
+.filter .f-icon{
+    display: flex;
+    justify-content: space-around;
+}
+.flex .filter .f-icon li{
+    font-size: 28px;
+    margin-top: -6px;
+}
+.flex .filter .f-theme-color{
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+.flex .filter .f-theme-color .text h2{
+    font-size: 22px;
+}
+.flex .filter .f-theme-color .f-check{
+    margin-left: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+.flex .filter .f-theme-color .f-check .f-input input{
+    accent-color: gold;
+    width: 1rem;
+    height: 1rem;
+}
+.flex .filter .f-theme-color .f-check .f-input label{
+    font-size: 20px;
+    margin-left: 0.5rem;
+}
+.flex .filter .bu{
+    width: 61%;
+    margin: auto;
+}
+.flex .filter .bu button{
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 7px;
+    background-color: #ec407a;
+    color: white;
+    border: none;
+}
+.caps-collection{
+    width: 180%;
+}
+.flex .caps-collection .text h1{
+    margin-top: -8px;
+    text-align: center;
+    font-weight: 400;
+    font-style: unset;
+    font-family: inherit;
+}
+.flex .caps-collection .text p{
+    font-weight: 500;
+    width: 83%;
+    font-size: 13px;
+    margin: 10px auto 15px;
+}
+.caps-collection .caps-collection-card .caps-card{
+    width: 32%;
+    box-shadow: 0px 0px 10px #efebeb;
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+.caps-collection .caps-collection-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 86%;
+    margin: auto;
+}
+.caps-collection .caps-collection-card .caps-card .img img{
+    position: absolute;
+    margin-left: -23px;
+    display: none;
+}
+.caps-collection .caps-collection-card .caps-card .img img:hover{
+    cursor: pointer;
+    display: block;
+}
+.caps-collection .caps-collection-card img:hover{
+    cursor: pointer;
+    display: none;
+}
+.caps-collection .caps-collection-card img{
+    width: 100%;
+    max-width: 280px;
+    height: 340px;
+}
+.caps-collection .caps-collection-card .caps-card h4{
+    font-size: 15px;
+    margin-top: 2rem;
+    color: #7c6b6b;
+}
+.caps-collection .caps-collection-card .caps-card p{
+    font-weight: 700;
+}
+.flex .caps-collection .caps-collection-card .caps-card .color-r{
+    display: flex;
+    justify-content: space-between;
+}
+.flex .caps-collection .caps-collection-card .caps-card .color-r .color-b{
+    width: 0.75rem;
+    border-width: 1px;
+    height: 0.75rem;
+    border-radius: 9999px;
+    tab-size: 4;
+    line-height: 1.5;
+    background-color: black;
+}
+.flex .caps-collection .caps-collection-card .caps-card .color-r .color-n{
+    width: 0.75rem;
+    border-width: 1px;
+    height: 0.75rem;
+    border-radius: 9999px;
+    tab-size: 4;
+    line-height: 1.5;
+    background-color: navy;
+}
+.flex .caps-collection .caps-collection-card .caps-card .color-r .color-r{
+    width: 0.75rem;
+    border-width: 1px;
+    height: 0.75rem;
+    border-radius: 9999px;
+    tab-size: 4;
+    line-height: 1.5;
+    background-color: red;
+}
+.caps-collection .caps-collection-card .caps-card .rupee{
+    display: flex;
+    margin-top: -8px;
+}
+.caps-collection .caps-collection-card .caps-card .rupee .one,.two{
+    display: flex;
+}
+.caps-collection .caps-collection-card .caps-card .rupee .one{
+    text-decoration: line-through;
+}
+.caps-collection .caps-collection-card .caps-card .rupee .one span{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.caps-collection .caps-collection-card .caps-card .rupee .two span{
+    margin-top: 2px;
+}
+.caps-collection .caps-collection-card .caps-card li.size{
+    border: 2px solid #c8c2c2;
+    width: 20px;
+    padding: 4px 16px 5px 7px;
+    font-size: 15px;
+    margin-top: 5px;
 }
 /* ////footer */
 .footer{
@@ -452,5 +657,45 @@ margin-top: -6px;
     .footer .first p{
         margin-right: auto;
     margin-left: auto;
+    }
+    /* ///////filter */
+    .flex{
+        display: block;
+    }
+    .flex .F-close .filter{
+        width: 100%;
+    }
+    .flex .caps-collection{
+        width: 100%;
+    }
+    .caps-collection .caps-collection-card .caps-card{
+        width: 100%;
+    }
+    .caps-collection .caps-collection-card img{
+        margin: auto;
+        display: flex;
+    }
+    .filter .f-icon{
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+    .flex .filter .f-icon li{
+        display: none;
+    }
+    .F-close .f1,.f2{
+        display: block;
+    }
+    .flex .f1{
+        display: block;
+    }
+    .flex .F-close{
+        transform: translate(10px, -770px);
+    }
+    .filter{
+        width: 100%;
+    }
+    .flex .F-open{
+
     }
 }
