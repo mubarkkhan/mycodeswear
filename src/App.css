@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     z-index: 10000;
+    position: relative;
 }
 .active{
     color: #ec407a!important;
@@ -11,12 +12,16 @@
 .flex{
     display: flex;
     margin-top: 2rem;
+    justify-content: space-between;
 }
 .Header{
     display: flex;
     padding: 16px 0px;
     background-color: white;
     box-shadow: 0px 0px 3px;
+    position: sticky;
+    z-index: 22229;
+    top: 0px;
 }
 .Header .first{
     display: flex;
@@ -282,20 +287,10 @@ margin-top: -6px;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.best .best-t-card .best-card .img img{
-    position: absolute;
-    margin-left: -23px;
+.best .best-t-card .best-card .img1{
     display: none;
 }
-.best .best-t-card .best-card .img img:hover{
-    cursor: pointer;
-    display: block;
-}
-.best .best-card img:hover{
-    cursor: pointer;
-    display: none;
-}
-.best .best-card img{
+.best .best-card .img2 img{
     width: 100%;
     max-width: 280px;
     height: 340px;
@@ -355,6 +350,8 @@ margin-top: -6px;
 /* /////////////caps */
 .filter{
     width: 130%;
+    position: sticky;
+    top: 0;
 }
 .f1,.f2{
     display: none;
@@ -395,12 +392,13 @@ margin-top: -6px;
     padding: 3px 10px;
     border-radius: 20px;
     margin-top: 7px;
+    margin-bottom: 5px;
     background-color: #ec407a;
     color: white;
     border: none;
 }
 .caps-collection{
-    width: 180%;
+    width: 80%;
 }
 .flex .caps-collection .text h1{
     margin-top: -8px;
@@ -429,20 +427,43 @@ margin-top: -6px;
     width: 86%;
     margin: auto;
 }
-.caps-collection .caps-collection-card .caps-card .img img{
+.caps-collection .caps-collection-card .caps-card .image{
+    position: relative;
+}
+.caps-collection .caps-collection-card .caps-card .image .img1{
+    opacity: 1;
+    transition-duration: .7s;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    object-fit: contain;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    position: absolute;
+}
+.caps-collection .caps-collection-card .caps-card .image .img{
+    opacity: 1;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .7s;
+    object-fit: contain;
+    width: 100%;
+}
+.caps-collection .caps-collection-card .caps-card .image .img1:hover{
+    opacity: 0;
+}
+.caps-collection .caps-collection-card .caps-card .image .img:hover{
+    opacity: 1;
+}
+.caps-collection .caps-collection-card .caps-card .img1 img{
     position: absolute;
     margin-left: -23px;
     display: none;
+    width: 100%;
+    max-width: 280px;
+    height: 340px;
 }
-.caps-collection .caps-collection-card .caps-card .img img:hover{
-    cursor: pointer;
-    display: block;
-}
-.caps-collection .caps-collection-card img:hover{
-    cursor: pointer;
-    display: none;
-}
-.caps-collection .caps-collection-card img{
+.caps-collection .caps-collection-card .img img{
     width: 100%;
     max-width: 280px;
     height: 340px;
@@ -621,9 +642,7 @@ margin-top: -6px;
         display: block;
     }
     .Header .t2 button{
-        position: absolute;
-    left: 90%;
-    top: -27%;
+    left: 44%;
     background-color: white;
     color: #ec407a!important;
     border: none;
@@ -633,19 +652,21 @@ margin-top: -6px;
         background-color: white;
     color: #ec407a!important;
     border: none;
-    position: absolute;
-    left: 90%;
     font-size: 41px;
     }
     .Header .second .icon-list{
         display: none!important;
     }
     .best .best-t-card .best-card{
-        width: 64%;
-        margin: auto;
+        width: 90%;
+        margin: 10px auto;
     }
-    .best .best-card img{
-        max-width: 320px;
+    .best .best-card .img2 img{
+        max-width: 347px;
+    height: 100%;
+    }
+    .best .best-t-card .best-card .img2{
+        text-align: center;
     }
     .icon-card{
         display: block;
@@ -659,9 +680,6 @@ margin-top: -6px;
     margin-left: auto;
     }
     /* ///////filter */
-    .flex{
-        display: block;
-    }
     .flex .F-close .filter{
         width: 100%;
     }
@@ -690,12 +708,31 @@ margin-top: -6px;
         display: block;
     }
     .flex .F-close{
-        transform: translate(10px, -770px);
+        transform: translate(-184px, -1px);
     }
     .filter{
         width: 100%;
     }
     .flex .F-open{
-
+        transform: translate(6px,-11px);
+    border: 2px solid #eae9e9;
+    width: 175vh;
+    }
+    .flex .f1 button.filteron1{
+        display: none;
+    }
+    .flex .f1 button.filteroff1{
+        display: block;
+    margin-left: 1rem;
+    position: absolute;
+    margin-top: -15px;
+    border: none;
+    font-size: 30px;
+    background-color: white;
+    }
+    .flex .F-open .filter .f-icon .f2 button.filteroff2{
+        border: none;
+    font-size: 25px;
+    background-color: white;
     }
 }

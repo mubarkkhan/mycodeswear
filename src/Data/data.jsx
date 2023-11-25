@@ -14,6 +14,25 @@ import themeimg5 from "../Image/gaming.webp"
 import themeimg6 from "../Image/lifestyle.webp"
 import themeimg7 from "../Image/programming.webp"
 import themeimg8 from "../Image/trending.webp"
+import capscollectionimg1 from "../Image/0 (6).webp"
+import { FaRupeeSign } from "react-icons/fa";
+import capscollectionimg2 from "../Image/0 (7).webp"
+import capscollectionimg3 from "../Image/0 (8).webp"
+import capscollectionimg4 from "../Image/0 (9).webp"
+import capscollectionimg5 from "../Image/0 (11).webp"
+import capscollectionimg6 from "../Image/0 (12).webp"
+import capscollectionimg7 from "../Image/0 (13).webp"
+import capscollectionimg8 from "../Image/0 (14).webp"
+import capscollectionimg9 from "../Image/0 (15).webp"
+import capscollectionimg11 from "../Image/1 (5).webp"
+import capscollectionimg12 from "../Image/1 (6).webp"
+import capscollectionimg13 from "../Image/1 (7).webp"
+import capscollectionimg14 from "../Image/1 (8).webp"
+import capscollectionimg15 from "../Image/1 (9).webp"
+import capscollectionimg16 from "../Image/1 (10).webp"
+import capscollectionimg17 from "../Image/1 (11).webp"
+import capscollectionimg18 from "../Image/1 (12).webp"
+import capscollectionimg19 from "../Image/1 (13).webp"
 
 const navbardata = [
     {
@@ -255,3 +274,105 @@ const filterinputdatas = [
     }
 ]
 export{filterinputdatas}
+const capscollectioncarddata=[
+    {
+        id:"1",
+        img:`${capscollectionimg1}`,
+        name:"CAP",
+        detail:"Pack Of Five Plain C...",
+        ricon:<FaRupeeSign />,
+        price:"699",
+        price2:"549",
+        img1:`${capscollectionimg11}`,
+        size:"L"
+    },
+    {
+        id:"2",
+        img:`${capscollectionimg2}`,
+        name:"CAP",
+        detail:"Pack Of Three Plain...",
+        ricon:<FaRupeeSign />,
+        price:"499",
+        price2:"349",
+        img1:`${capscollectionimg12}`,
+        size:"L"
+    },
+    {
+        id:"3",
+        img:`${capscollectionimg3}`,
+        name:"CAP",
+        detail:"Pack Of Five Anonymo...",
+        ricon:<FaRupeeSign />,
+        price:"649",
+        price2:"499",
+        img1:`${capscollectionimg13}`,
+        size:"L"
+    },
+    {
+        id:"4",
+        img:`${capscollectionimg4}`,
+        name:"CAP",
+        detail:"Pack Of Three Anonymo...",
+        ricon:<FaRupeeSign />,
+        price:"469",
+        price2:"319",
+        img1:`${capscollectionimg14}`,
+        size:"L"
+    },
+    {
+        id:"5",
+        img:`${capscollectionimg5}`,
+        name:"CAP",
+        detail:"Naruto Cap",
+        ricon:<FaRupeeSign />,
+        price:"369",
+        price2:"219",
+        img1:`${capscollectionimg15}`,
+        size:"L"
+    },
+    {
+        id:"6",
+        img:`${capscollectionimg6}`,
+        name:"CAP",
+        detail:"Marshmallow Cap",
+        ricon:<FaRupeeSign />,
+        price:"369",
+        price2:"219",
+        img1:`${capscollectionimg16}`,
+        size:"L"
+    },
+    {
+        id:"7",
+        img:`${capscollectionimg7}`,
+        name:"CAP",
+        detail:"Anonymous Hacker Mas...",
+        ricon:<FaRupeeSign />,
+        price:"369",
+        price2:"219",
+        img1:`${capscollectionimg17}`,
+        size:"L"
+    },
+    {
+        id:"8",
+        img:`${capscollectionimg8}`,
+        name:"CAP",
+        detail:"Git Cap",
+        ricon:<FaRupeeSign />,
+        price:"369",
+        price2:"219",
+        img1:`${capscollectionimg18}`,
+        size:"L"
+    },
+    {
+        id:"9",
+        img:`${capscollectionimg9}`,
+        name:"CAP",
+        detail:"Adobe After Effects...",
+        ricon:<FaRupeeSign />,
+        price:"369",
+        price2:"219",
+        img1:`${capscollectionimg19}`,
+        size:"L"
+    },
+   ]
+   export{capscollectioncarddata}
