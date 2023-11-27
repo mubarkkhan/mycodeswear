@@ -54,7 +54,7 @@ function Header(){
         else if(search == null){
             return(
                 <>
-                <h1>no found data</h1>
+                <h1>no found data here</h1>
                 </>
             )
         }
