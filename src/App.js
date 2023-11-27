@@ -8,6 +8,7 @@ import { Login } from "./Login/login";
 import { Whatsapp } from "./Whatsapp/whatsapp-link";
 import { Caps } from "./Caps/caps";
 import { Detail } from "./Caps/productdetail";
+import { Filterdata } from "./Caps/filterdata";
 
 function Codes(){
   return(
@@ -19,7 +20,8 @@ function Codes(){
       <Route path="/login" element={<Login/>}/>
       <Route path="/whatsapp" element={<Whatsapp/>}/>
       <Route path="/caps" element={<Caps/>}/>
-      <Route path="/detail/:ProductId" element={<Detail/>}/>
+      <Route path="caps/Detail/:ProductId" element={<Detail/>}/>
+      <Route path="/filterdata" element={<Filterdata/>}/>
     </Routes>
     </BrowserRouter>
     </>

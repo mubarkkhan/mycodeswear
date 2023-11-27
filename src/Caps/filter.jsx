@@ -11,6 +11,9 @@ function Filter(){
     const filterbu2=()=>{
         setfilterT(false)
     }
+    const filterclick =()=>{
+        
+    }
     return(
         <>
         <div className="f1">

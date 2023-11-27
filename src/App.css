@@ -610,9 +610,9 @@ margin-top: -6px;
     .Header .second .open{
         background-color: white;
         color: #ec407a;
-        transform: translate(-231px, 100px);
+        transform: translate(-269px, 100px);
     z-index: 1;
-    width: 99vh;
+    width: 70vh;
     height: 53vh;
     position: absolute;
     }

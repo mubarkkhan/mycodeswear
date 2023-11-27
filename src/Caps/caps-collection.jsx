@@ -17,7 +17,7 @@ function Capscollection() {
                             return (
                                 <>
                                     <div id={data.id} className="caps-card">
-                                        <Link to="/detail">
+                                        <Link to={`Detail/${data.id}`}>
                                         <div className="image">
                                             <div className="img1">
                                                 <img src={data.img} alt="" />

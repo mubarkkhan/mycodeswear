@@ -10,6 +10,9 @@ function Detail(){
     return(
         <>
         <Header/>
+        <div className="det">
+            <h1>{detaildata.name}</h1>
+        </div>
         </>
     )
 }
