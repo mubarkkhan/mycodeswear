@@ -74,11 +74,13 @@ function Bestselling(){
                     return(
                         <>
                         <div id={data.id} className="best-card">
+                            <div className="image-best">
                             <div className="img1">
                                 <img src={data.img1} alt="" />
                             </div>
                             <div className="img2">
                             <img src={data.img} alt="" />
+                            </div>
                             </div>
                             <h4>{data.name}</h4>
                             <p>{data.detail}</p>

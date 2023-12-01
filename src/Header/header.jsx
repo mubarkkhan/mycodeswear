@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import logoimg from "../Image/logo (1).png"
 import { CiSearch } from "react-icons/ci";
 import { navbardata } from "../Data/data";
@@ -7,8 +7,11 @@ import { BsMoonStars } from "react-icons/bs";
 import { GiCrossMark } from "react-icons/gi";
 import { IoMenuOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import { Cart } from "../Cart/cart";
+import { useCart } from "react-use-cart";
 
 function Header(){
+    const {totalUniqueItems}=useCart()
     const dropdowndata=[
         {
             id:1,
@@ -27,6 +30,7 @@ function Header(){
         }
     ]
     const [select,setselect]=useState([])
+    const [carttoggle,setcarttoggle]=useState(false)
     const [search,setsearch]=useState("")
     const [moon,setmoon]=useState(false)
     const [toggle,settoggle]=useState(false)
@@ -45,7 +49,12 @@ function Header(){
     const Moon2=()=>{
         setmoon(false)
     }
-    
+    const cartclick1 =()=>{
+        setcarttoggle(true)
+    }
+    const cartclick2 =()=>{
+        setcarttoggle(false)
+    }
     const searchclick=(search)=>{
         const searchdata = navbardata.find(finddata=>finddata.name.toLowerCase().startsWith(search))
         if(search == search){
@@ -62,6 +71,9 @@ function Header(){
     console.log(search)
     return(
         <>
+        <div className="uniq">
+                <h1>{totalUniqueItems}</h1>
+            </div>
         <div className="Header">
             <div className="t1">
                         <button onClick={click1} className={`${(toggle === true) ? "op1" : "cl1"}`}><IoMenuOutline /></button>
@@ -114,7 +126,7 @@ function Header(){
                         return(
                             <>
                             <div className="menu" id={data.id}>
-                            <li><NavLink excat activeClassName="active" to={data.path}>{data.name}</NavLink></li>
+                                <li><NavLink excat activeClassName="active" to={data.path}>{data.name}</NavLink></li>
                             </div>
                             </>
                         )
@@ -123,7 +135,8 @@ function Header(){
             </div>
             </div>
             <div className="icon-list">
-                <span><IoCartOutline /></span>
+                <span className={`${(carttoggle === true) ? "bucarton1" : "bucartoff1"}`} onClick={cartclick1}><IoCartOutline /></span>
+                <span className={`${(carttoggle === false) ? "bucarton2" : "bucartoff2"}`} onClick={cartclick2}><IoCartOutline /></span>
                 <button><NavLink excat activeClassName="active" to="/login">Login</NavLink></button>
                 <div className={`${(moon === true) ? "mopen" : "mclose"}`}>
                 <button onClick={Moon1} className={`${(moon === true) ? "on1" : "off1"}`}><BsMoonStars /></button>
@@ -131,6 +144,10 @@ function Header(){
                 <button onClick={Moon2} className={`${(moon === false) ? "on2" : "off2"}`}><BsMoonStars /></button>
             </div>
             </div>
+        </div>
+        {/* cart */}
+        <div className={`${(carttoggle === true) ? "carton" : "cartoff"}`}>
+        <Cart/>
         </div>
         </>
     )
